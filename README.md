@@ -1,5 +1,5 @@
 ﻿# Sachy 
-robotické sachyprojekt 3.C
+robotické sachy - projekt 3.C
 
 
 ## Komponenty

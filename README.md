@@ -37,3 +37,6 @@ robotické sachy - projekt 3.C
 ## Simulator
 http://sourceforge.net/projects/simulide/?source=typ_redirect
 + navod https://www.youtube.com/watch?v=c7SFryRa5hs
+
+# Pohon
++https://www.youtube.com/watch?v=XCp4M08IWnA

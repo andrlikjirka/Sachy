@@ -12,4 +12,9 @@ robotické sachyprojekt 3.C
 
 # instalace knihovny keypad
  arduino->add Library
+ 3x4
  http://www.itnetwork.cz/arduino-5-dil-klavesnice
+
+
+klavesnice 4x4
+http://arduino8.webnode.cz/news/lekce-23-arduino-a-klavesnice-4x3/

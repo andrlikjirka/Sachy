@@ -15,3 +15,6 @@ klavesnice 4x4
 +
 +klavesnice 2.0  4x4
 +http://arduino-home.webnode.cz/news/dil-10-membranove-maticove-klavesnice-idealni-ovladace-pro-nase-projekty/
+
+simulator
+http://sourceforge.net/projects/simulide/?source=typ_redirect

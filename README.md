@@ -19,3 +19,11 @@ klavesnice 4x4
 simulator
 http://sourceforge.net/projects/simulide/?source=typ_redirect
 + navod https://www.youtube.com/watch?v=c7SFryRa5hs
+
+# zapojeni pinu
+ + D2-9 klavesnice
+ + D10,11 motor 1
+ + D12,13 motor 2
+ + A4 rele pro magnet
+ + A0,1 ultrazvukove cidlo
+ + A2,3 ultrazvukove cidlo 2

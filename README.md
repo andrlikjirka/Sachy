@@ -10,6 +10,8 @@ robotické sachy - projekt 3.C
 * Ultrazvukové čidlo
 ![obrazek](http://digipak.org/zencart/images/ArduinoLeonardo.jpg)
 
+Náčrt
+![obrazek] (https://lh5.googleusercontent.com/-cO8kCIxgRdY/VT6Ny2kthyI/AAAAAAAAHXo/EnnSWkelqco/w839-h535-no/N%C3%A1%C4%8Drt.png)
 
 
 # Zapojeni pinu

@@ -19,6 +19,7 @@ robotické sachy - projekt 3.C
  + A4 rele pro magnet
  + A0,1 ultrazvukove cidlo
  + A2,3 ultrazvukove cidlo 2
+
 ## Periferie
 
 ## Mereni vzdalenosti

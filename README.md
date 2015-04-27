@@ -18,3 +18,4 @@ klavesnice 4x4
 
 simulator
 http://sourceforge.net/projects/simulide/?source=typ_redirect
++ navod https://www.youtube.com/watch?v=c7SFryRa5hs

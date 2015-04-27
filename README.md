@@ -8,4 +8,4 @@ robotické sachyprojekt 3.C
 * servo
 * motor
  
-[obrazek](http://nd01.jxs.cz/998/417/1d93c3c898_2700577_o2.jpg)
+![obrazek](http://nd01.jxs.cz/998/417/1d93c3c898_2700577_o2.jpg)

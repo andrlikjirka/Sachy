@@ -1,8 +1,8 @@
-﻿# Sachy bla
+﻿# Sachy 
 robotické sachyprojekt 3.C
 
 
-## komponenty
+## Komponenty
 
 * arduino
 * servo

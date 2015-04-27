@@ -24,11 +24,12 @@ robotické sachy - projekt 3.C
 
 ## Mereni vzdalenosti
 ![obrazek](http://www.santy.cz/data/product/210_957.jpg)
-* http://arduino8.webnode.cz/news/lekce-9-merime-vzdalenost-s-hc-sr04/
-* http://arduinonavody.eu/arduino-s-ultrazvukovym-senzorem/
++ http://arduino8.webnode.cz/news/lekce-9-merime-vzdalenost-s-hc-sr04/
++ http://arduinonavody.eu/arduino-s-ultrazvukovym-senzorem/
+
 ## Klavesnice 4x4
 ![key](http://files.arduino8.webnode.cz/200000424-d2b67d6a29/unnamed.jpg)
- http://arduino8.webnode.cz/news/lekce-23-arduino-a-klavesnice-4x3/		 
+ + http://arduino8.webnode.cz/news/lekce-23-arduino-a-klavesnice-4x3/		 
 
 ## Klavesnice 2.0  4x4
 +http://arduino-home.webnode.cz/news/dil-10-membranove-maticove-klavesnice-idealni-ovladace-pro-nase-projekty/

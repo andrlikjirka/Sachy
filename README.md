@@ -12,3 +12,4 @@ robotické sachyprojekt 3.C
 
 # instalace knihovny keypad
  arduino->add Library
+ http://www.itnetwork.cz/arduino-4-dil-cidlo-dht11-a-konstrukce-jazyka

@@ -23,6 +23,7 @@ robotické sachy - projekt 3.C
 # periferie
 ## mereni vzdalenocti 
 http://arduino8.webnode.cz/news/lekce-9-merime-vzdalenost-s-hc-sr04/
+http://arduinonavody.eu/arduino-s-ultrazvukovym-senzorem/
 ## klavesnice 4x4
  http://arduino8.webnode.cz/news/lekce-23-arduino-a-klavesnice-4x3/		 
 +

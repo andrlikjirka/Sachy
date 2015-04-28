@@ -8,7 +8,8 @@ robotické sachy - projekt 3.C
 * Servo
 * Motor
 * Ultrazvukové čidlo
-![obrazek](http://files.arduino8.webnode.cz/200000081-ec223ed343/F90JYNWH7UR7RCS.LARGE.jpg)
+
+![obrazek](http://www.arduino.cc/en/uploads/Main/ArduinoUnoSmd450px.jpg)
 
 ## Náčrt
 ![obrazek] (https://lh5.googleusercontent.com/-cO8kCIxgRdY/VT6Ny2kthyI/AAAAAAAAHXo/EnnSWkelqco/w839-h535-no/N%C3%A1%C4%8Drt.png)
@@ -25,7 +26,7 @@ robotické sachy - projekt 3.C
 ## Periferie
 
 ## Mereni vzdalenosti
-![obrazek](http://www.santy.cz/data/product/210_957.jpg)
+![obrazek](http://files.arduino8.webnode.cz/200000081-ec223ed343/F90JYNWH7UR7RCS.LARGE.jpg)
 + http://arduino8.webnode.cz/news/lekce-9-merime-vzdalenost-s-hc-sr04/
 + http://arduinonavody.eu/arduino-s-ultrazvukovym-senzorem/
 

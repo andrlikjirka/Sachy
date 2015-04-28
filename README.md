@@ -16,9 +16,9 @@ robotické sachy - projekt 3.C
 
 
 # Zapojeni pinu
- + D2-9 klavesnice
+ + D2-4,7-9,12-13 klavesnice
  + D10,11 motor 1
- + D12,13 motor 2
+ + D5,6 motor 2
  + A4 rele pro magnet
  + A0,1 ultrazvukove cidlo
  + A2,3 ultrazvukove cidlo 2

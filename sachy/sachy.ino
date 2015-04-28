@@ -2,23 +2,32 @@
 #define TRIGPIN A0 // Trig pin z HC-SC04 na pin 3 
 void setup() { 
   pinMode(10,OUTPUT);
-//Nastaví sériovou komunikaci 
-Serial.begin(9600); 
+  pinMode(11,OUTPUT);
+  //Nastaví sériovou komunikaci 
+  Serial.begin(9600); 
 
 
-//Nastaví pin 2 jako vstupní 
-pinMode(ECHOPIN, INPUT); 
-//Nastaví pin 3 jako výstupní 
-pinMode(TRIGPIN, OUTPUT);
+  //Nastaví pin 2 jako vstupní 
+  pinMode(ECHOPIN, INPUT); 
+  //Nastaví pin 3 jako výstupní 
+  pinMode(TRIGPIN, OUTPUT);
 
 } 
-void motor(float vzdalX,float vzdalXpozadovana) {
-  if (vzdalX<vzdalXpozadovana){
-    digitalWrite(10,HIGH);
+
+void motor(float vzdalX, float vzdalXpozadovana){
+  if(vzdalX < (vzdalXpozadovana - 0.5)){
+    digitalWrite(11, LOW);
+    digitalWrite(10, HIGH);
   }
-  else{
-    digitalWrite(10,LOW);
+  if(vzdalX > (vzdalXpozadovana + 0.5)){
+    digitalWrite(10, LOW);
+    digitalWrite(11, HIGH);
   }
+  if ((vzdalX > (vzdalXpozadovana - 0.5)) && (vzdalX < (vzdalXpozadovana + 0.5))){
+    digitalWrite(10, LOW);
+    digitalWrite(11, LOW);
+  }
+    
 }
 
 float ultrazvuk1() {

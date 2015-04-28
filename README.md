@@ -47,6 +47,7 @@ http://sourceforge.net/projects/simulide/?source=typ_redirect
 ![obrazek](http://mysak.mazec.org/cnc/cnc7.jpg)
 + https://www.youtube.com/watch?v=XCp4M08IWnA
 + http://maczaka.webz.cz/cnc_rezacka.htm
+
 # Video
 
 [![Video webcam tracking](https://img.youtube.com/vi/0OXLMgZMjTo/0.jpg)](https://www.youtube.com/watch?v=0OXLMgZMjTo)

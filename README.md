@@ -1,6 +1,6 @@
 ﻿# Sachy 
 robotické sachy - projekt 3.C
-
+![pic](http://modranka-sach.wbl.sk/0600-markob.gif)
 
 ## Komponenty
 
@@ -42,5 +42,6 @@ http://sourceforge.net/projects/simulide/?source=typ_redirect
 + navod https://www.youtube.com/watch?v=c7SFryRa5hs
 
 # Pohon
+![obrazek](http://artofcircuits.com/wp-content/uploads/2014/05/2-ch-relay-module-1.jpg)
 + https://www.youtube.com/watch?v=XCp4M08IWnA
 

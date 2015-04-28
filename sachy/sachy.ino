@@ -5,7 +5,13 @@
 #define ECHOPIN2 A3 // echopin cidla 2 na A3
 #define TRIGPIN2 A2 // trigpin cidla 2 na A2
 #define NECITLIVOST 0.8
+#define RYCHLOST 150
+#define RELEPIN A4
 
+int stav = 0;
+int stavM1 = 0;
+int stavM2 = 0;
+int motorstop = 1;
 
 //klavesnice
 const byte ROWS = 4; // 4 řádky
@@ -17,14 +23,16 @@ char hexaKeys[ROWS][COLS] = {
   {'1','2','3','4'},
   {'5','6','7','8'}
 };
-byte rowPins[ROWS] = {9, 8, 7, 6}; //čísla pinů s řadkem 1 2 3 4
-byte colPins[COLS] = {5, 4, 3, 2}; //čísla pinu se sloupcem 1 2 3 4
+byte rowPins[ROWS] = {9, 8, 7, 13}; //čísla pinů s řadkem 1 2 3 4
+byte colPins[COLS] = {12, 4, 3, 2}; //čísla pinu se sloupcem 1 2 3 4
  
 //initializuje objekt klávesnice s názvem customKeypad
 Keypad customKeypad = Keypad( makeKeymap(hexaKeys), rowPins, colPins, ROWS, COLS);
  
-char lastkeyX = 'A';
-char lastkeyY = '1';
+char lastkeyX = '0';
+char lastkeyY = '0';
+char lastkey1X = '0';
+char lastkey1Y = '0';
 
 float souradniceX[] = {3.5, 11.5, 20.5, 29.5, 38.5, 47.5, 56.5, 65.5, 74.5,82.5};
 float souradniceY[] = {11.5, 20.5, 29.5, 38.5, 47.5, 56.5, 65.5, 74.5};
@@ -46,7 +54,8 @@ void klavesnice(){
   (customKey == 'F')||
   (customKey == 'G')||
   (customKey == 'H')){
-   lastkeyX = customKey;
+    lastkey1X = lastkeyX;
+    lastkeyX = customKey;
   }
   if(
   (customKey == '1')||
@@ -57,17 +66,18 @@ void klavesnice(){
   (customKey == '6')||
   (customKey == '7')||
   (customKey == '8')){
-   lastkeyY = customKey;
+    lastkey1Y = lastkeyY;
+    lastkeyY = customKey;
   }
 }
 void setup() { 
   pinMode(10, OUTPUT);
   pinMode(11, OUTPUT);
-  pinMode(12, OUTPUT);
-  pinMode(13, OUTPUT);
+  pinMode(5, OUTPUT);
+  pinMode(6, OUTPUT);
   //Nastaví sériovou komunikaci 
   Serial.begin(9600); 
-
+  pinMode(RELEPIN, OUTPUT);
 
   //Nastaví pin 2 jako vstupní 
   pinMode(ECHOPIN, INPUT); 
@@ -79,66 +89,98 @@ void setup() {
 } 
 
 void planovac(){
-//  if( lastkeyX == 'A'){
-//    pozadX = souradniceX[1];
-//  }
-//  if( lastkeyX == 'B'){
-//    pozadX = souradniceX[2];
-//  }
-//  if( lastkeyX == 'C'){
-//    pozadX = souradniceX[3];
-//  }
-//  if( lastkeyX == 'D'){
-//    pozadX = souradniceX[4];
-//  }
-//  if( lastkeyX == 'E'){
-//    pozadX = souradniceX[5];
-//  }
-//  if( lastkeyX == 'F'){
-//    pozadX = souradniceX[6];
-//  }
-//  if( lastkeyX == 'G'){
-//    pozadX = souradniceX[7];
-//  }
-//  if( lastkeyX == 'H'){
-//    pozadX = souradniceX[8];
-//  }
   
-  pozadX = souradniceX[lastkeyX - 'A' + 1];
-  pozadY = souradniceY[lastkeyY - '1']; 
+  if(stav == 0){
+    if((lastkeyX != '0')&&
+       (lastkeyY != '0')&&
+       (lastkey1X != '0')&&
+       (lastkey1Y != '0')){
+      stav = 1;
+      motorstop = 1;
+    } 
+    digitalWrite(A4, LOW);
+  }
   
+  if(stav == 1){
+    motorstop = 0;
+    digitalWrite(A4, LOW);
+    pozadX = souradniceX[lastkey1X - 'A' + 1];
+    pozadY = souradniceY[lastkey1Y - '1']; 
+    if((stavM1 == 1)&&(stavM2 == 1)){
+      stav = 2;
+      stavM1 = 0;
+      stavM2 = 0;
+      
+    }
+  }
+  if(stav == 2){
+    pozadX = souradniceX[lastkeyX - 'A' + 1];
+    pozadY = souradniceY[lastkeyY - '1']; 
+    digitalWrite(A4, HIGH);
+    if((stavM1 == 1)&&(stavM2 == 1)){
+      stavM1 = 0;
+      stavM2 = 0;
+      stav = 0;
+      motorstop = 1;
+      lastkeyX = '0';
+      lastkeyY = '0';
+      lastkey1X = '0';
+      lastkey1Y = '0';
+
+    }
+  }
 }
   
 void motor2(float vzdalY, float vzdalYpozadovana){
-  if(vzdalY < (vzdalYpozadovana - NECITLIVOST)){
-    digitalWrite(13, LOW);
-    digitalWrite(12, HIGH);
+  stavM2 = 0;
+  if(motorstop == 1){
+     analogWrite(5, 0);
+     analogWrite(6, 0);
+      
   }
-  if(vzdalY > (vzdalYpozadovana + NECITLIVOST)){
-    digitalWrite(12, LOW);
-    digitalWrite(13, HIGH);
-  }
-  if ((vzdalY > (vzdalYpozadovana - NECITLIVOST)) && (vzdalY < (vzdalYpozadovana + NECITLIVOST))){
-    digitalWrite(12, LOW);
-    digitalWrite(13, LOW);
-  }
+  else{
     
+    if(vzdalY < (vzdalYpozadovana - NECITLIVOST)){
+      analogWrite(6, 0);
+      analogWrite(5, RYCHLOST);
+      stavM2 = 3;
+    }
+    if(vzdalY > (vzdalYpozadovana + NECITLIVOST)){
+      analogWrite(5, 0);
+      analogWrite(6, RYCHLOST);
+      stavM2 = 4;
+    }
+    if ((vzdalY > (vzdalYpozadovana - NECITLIVOST)) && (vzdalY < (vzdalYpozadovana + NECITLIVOST))){
+      analogWrite(5, 0);
+      analogWrite(6, 0);
+      stavM2 = 1;
+    }
+  }
 }
 
 void motor1(float vzdalX, float vzdalXpozadovana){
-  if(vzdalX < (vzdalXpozadovana - NECITLIVOST)){
-    digitalWrite(11, LOW);
-    digitalWrite(10, HIGH);
+  stavM1 = 0;
+  if(motorstop == 1){
+    analogWrite(10, 0);
+    analogWrite(11, 0);
   }
-  if(vzdalX > (vzdalXpozadovana + NECITLIVOST)){
-    digitalWrite(10, LOW);
-    digitalWrite(11, HIGH);
+  else{
+    if(vzdalX < (vzdalXpozadovana - NECITLIVOST)){
+      analogWrite(11, 0);
+      analogWrite(10, RYCHLOST);
+      stavM1 = 5;
+    }
+    if(vzdalX > (vzdalXpozadovana + NECITLIVOST)){
+      analogWrite(10, 0);
+      analogWrite(11, RYCHLOST);
+      stavM1 = 6;
+    }
+    if ((vzdalX > (vzdalXpozadovana - NECITLIVOST)) && (vzdalX < (vzdalXpozadovana + NECITLIVOST))){
+      analogWrite(10, 0);
+      analogWrite(11, 0);
+      stavM1 = 1;
+    }
   }
-  if ((vzdalX > (vzdalXpozadovana - NECITLIVOST)) && (vzdalX < (vzdalXpozadovana + NECITLIVOST))){
-    digitalWrite(10, LOW);
-    digitalWrite(11, LOW);
-  }
-    
 }
 
 float ultrazvuk2() {
@@ -186,9 +228,23 @@ Serial.print("cm ");
 Serial.print(vzdalY); 
 Serial.print("cm ");
 Serial.print(pozadX);
-Serial.print("pozadX ");
+Serial.print("=pozadX ");
 Serial.print(pozadY);
-Serial.print("pozadY\n");
+Serial.print("=pozadY ");
+Serial.print("stav=");
+Serial.print(stav);
+Serial.print("  ");
+Serial.print(lastkeyX);
+Serial.print(lastkeyY);
+Serial.print(lastkey1X);
+Serial.print(lastkey1Y);
+Serial.print("  ");
+Serial.print("stavM1=");
+Serial.print(stavM1);
+Serial.print("  ");
+Serial.print(" stavM2=");
+Serial.print(stavM2);
+Serial.print("\n");
 delay(100); 
 }
 

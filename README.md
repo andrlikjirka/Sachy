@@ -12,7 +12,7 @@ robotické sachy - projekt 3.C
 ![obrazek](http://www.arduino.cc/en/uploads/Main/ArduinoUnoSmd450px.jpg)
 
 ## Náčrt
-![obrazek] (https://lh5.googleusercontent.com/-cO8kCIxgRdY/VT6Ny2kthyI/AAAAAAAAHXo/EnnSWkelqco/w839-h535-no/N%C3%A1%C4%8Drt.png)
+![obrazek] (https://github.com/dtruhlar/Sachy/blob/master/technicka_dokumentace/Nacrt1.png?raw=true)
 
 
 # Zapojeni pinu

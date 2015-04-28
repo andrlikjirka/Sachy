@@ -43,9 +43,9 @@ http://sourceforge.net/projects/simulide/?source=typ_redirect
 
 # Pohon
 ![obrazek](http://artofcircuits.com/wp-content/uploads/2014/05/2-ch-relay-module-1.jpg)
-+ https://www.youtube.com/watch?v=XCp4M08IWnA
 ![obrazek](http://www.upnito.sk/0/69farjeaqpvxb2ns5j4hdwme7rnwer8k.jpg)
-
+![obrazek](http://mysak.mazec.org/cnc/cnc7.jpg)
+++ https://www.youtube.com/watch?v=XCp4M08IWnA
 
 # Video
 

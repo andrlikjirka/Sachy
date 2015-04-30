@@ -51,3 +51,6 @@ http://sourceforge.net/projects/simulide/?source=typ_redirect
 # Video
 
 [![Video webcam tracking](https://img.youtube.com/vi/0OXLMgZMjTo/0.jpg)](https://www.youtube.com/watch?v=0OXLMgZMjTo)
+
+[![Video webcam tracking](https://img.youtube.com/vi/POHm_Uk_R_s/0.jpg)](https://www.youtube.com/watch?v=POHm_Uk_R_s)
+

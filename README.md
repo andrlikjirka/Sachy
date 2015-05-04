@@ -36,7 +36,8 @@ robotické sachy - projekt 3.C
 
 ## Klavesnice 2.0  4x4
 + http://arduino-home.webnode.cz/news/dil-10-membranove-maticove-klavesnice-idealni-ovladace-pro-nase-projekty/
-
+ ![obrazek](http://laser-shop.cz/2876-thickbox/arduino-klavesnice-membranova-4x4.jpg)
+ ![obrazek](http://robotstore.cz/obchod/arduino/5x4-maticova-membranova-klavesnice-arduino-keypad/#)
 ## Simulator
 http://sourceforge.net/projects/simulide/?source=typ_redirect
 + navod https://www.youtube.com/watch?v=c7SFryRa5hs

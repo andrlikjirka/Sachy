@@ -53,7 +53,7 @@ http://sourceforge.net/projects/simulide/?source=typ_redirect
 
 
 # Foto
-
+  ![obrazek](https://raw.githubusercontent.com/dtruhlar/Sachy/master/technicka_dokumentace/IMG_20150505_140714.jpg)
 
 
 # Video

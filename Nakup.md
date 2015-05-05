@@ -9,3 +9,8 @@
 + koncovky  40          78czk
 + sololit 1000x1000     75czk
 + zavitova tyc+matice   98czk
+
+
+
+## bude jeste potreba
++ 

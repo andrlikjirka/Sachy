@@ -4,14 +4,21 @@
 #define TRIGPIN A0 // Trig pin z HC-SC04 na pin A0 
 #define ECHOPIN2 A3 // echopin cidla 2 na A3
 #define TRIGPIN2 A2 // trigpin cidla 2 na A2
-#define NECITLIVOST 0.8
-#define RYCHLOST 150
+#define NECITLIVOST 1.5
+#define RYCHLOST_SPOD 255
+#define RYCHLOST_HOR 150
 #define RELEPIN A4
+#define ST_KLID 0
+#define ST_PRO_FIG 1
+#define ST_S_FIG 2
+#define ST_UCHOP 3
+#define DELAY_UCHOP 10
 
 int stav = 0;
 int stavM1 = 0;
 int stavM2 = 0;
 int motorstop = 1;
+int uchop_cekani = 0;
 
 //klavesnice
 const byte ROWS = 4; // 4 řádky
@@ -90,37 +97,47 @@ void setup() {
 
 void planovac(){
   
-  if(stav == 0){
+  if(stav == ST_KLID){
     if((lastkeyX != '0')&&
        (lastkeyY != '0')&&
        (lastkey1X != '0')&&
        (lastkey1Y != '0')){
-      stav = 1;
+      stav = ST_PRO_FIG;
       motorstop = 1;
     } 
     digitalWrite(A4, LOW);
   }
   
-  if(stav == 1){
+  if(stav == ST_PRO_FIG){
     motorstop = 0;
     digitalWrite(A4, LOW);
     pozadX = souradniceX[lastkey1X - 'A' + 1];
     pozadY = souradniceY[lastkey1Y - '1']; 
     if((stavM1 == 1)&&(stavM2 == 1)){
-      stav = 2;
-      stavM1 = 0;
-      stavM2 = 0;
+      stav = ST_UCHOP;
+      
       
     }
   }
-  if(stav == 2){
+  if(stav == ST_UCHOP){
+    uchop_cekani = uchop_cekani + 1;
+    if(uchop_cekani == DELAY_UCHOP){
+      stav = ST_S_FIG;
+      uchop_cekani = 0;
+      stavM1 = 0;
+      stavM2 = 0;
+    }
+  }
+    
+    
+  if(stav == ST_S_FIG){
     pozadX = souradniceX[lastkeyX - 'A' + 1];
     pozadY = souradniceY[lastkeyY - '1']; 
     digitalWrite(A4, HIGH);
     if((stavM1 == 1)&&(stavM2 == 1)){
       stavM1 = 0;
       stavM2 = 0;
-      stav = 0;
+      stav = ST_KLID;
       motorstop = 1;
       lastkeyX = '0';
       lastkeyY = '0';
@@ -132,6 +149,7 @@ void planovac(){
 }
   
 void motor2(float vzdalY, float vzdalYpozadovana){
+  //spodni motor
   stavM2 = 0;
   if(motorstop == 1){
      analogWrite(5, 0);
@@ -142,12 +160,12 @@ void motor2(float vzdalY, float vzdalYpozadovana){
     
     if(vzdalY < (vzdalYpozadovana - NECITLIVOST)){
       analogWrite(6, 0);
-      analogWrite(5, RYCHLOST);
+      analogWrite(5, RYCHLOST_SPOD);
       stavM2 = 3;
     }
     if(vzdalY > (vzdalYpozadovana + NECITLIVOST)){
       analogWrite(5, 0);
-      analogWrite(6, RYCHLOST);
+      analogWrite(6, RYCHLOST_SPOD);
       stavM2 = 4;
     }
     if ((vzdalY > (vzdalYpozadovana - NECITLIVOST)) && (vzdalY < (vzdalYpozadovana + NECITLIVOST))){
@@ -159,6 +177,7 @@ void motor2(float vzdalY, float vzdalYpozadovana){
 }
 
 void motor1(float vzdalX, float vzdalXpozadovana){
+  //horni motor
   stavM1 = 0;
   if(motorstop == 1){
     analogWrite(10, 0);
@@ -167,12 +186,12 @@ void motor1(float vzdalX, float vzdalXpozadovana){
   else{
     if(vzdalX < (vzdalXpozadovana - NECITLIVOST)){
       analogWrite(11, 0);
-      analogWrite(10, RYCHLOST);
+      analogWrite(10, RYCHLOST_HOR);
       stavM1 = 5;
     }
     if(vzdalX > (vzdalXpozadovana + NECITLIVOST)){
       analogWrite(10, 0);
-      analogWrite(11, RYCHLOST);
+      analogWrite(11, RYCHLOST_HOR);
       stavM1 = 6;
     }
     if ((vzdalX > (vzdalXpozadovana - NECITLIVOST)) && (vzdalX < (vzdalXpozadovana + NECITLIVOST))){

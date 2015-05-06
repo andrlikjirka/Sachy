@@ -60,8 +60,12 @@ http://sourceforge.net/projects/simulide/?source=typ_redirect
 
 [![Video webcam tracking](https://img.youtube.com/vi/0OXLMgZMjTo/0.jpg)](https://www.youtube.com/watch?v=0OXLMgZMjTo)
 
-Sachovy robot 1.0.0
+## Sachovy robot 1.0.0
 [![Video webcam tracking](https://img.youtube.com/vi/POHm_Uk_R_s/0.jpg)](https://www.youtube.com/watch?v=POHm_Uk_R_s)
 
-Sachovy robot 2.0.0
+## Sachovy robot 2.0.0
 [![Video webcam tracking](https://img.youtube.com/vi/9Ko2GWYj2lg/0.jpg)](https://www.youtube.com/watch?v=9Ko2GWYj2lg)
+
+## Sachovy robot 3.0.0
+[![Video webcam tracking](https://img.youtube.com/vi/Ib0ldMd8Mao/0.jpg)](https://www.youtube.com/watch?v=Ib0ldMd8Mao)
+

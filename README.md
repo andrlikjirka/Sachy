@@ -23,6 +23,11 @@ robotické sachy - projekt 3.C
  + A0,1 ultrazvukove cidlo
  + A2,3 ultrazvukove cidlo 2
 
+ + konkretni zapojeni
+  + P10,11 rizeni motor horni
+  + P5,6 rizeni motor spodni
+  + ultrazvuk spodni motor - echo A3,trg A2
+  + ultrazvuk horni motor - echo A1, trig A0
 ## Periferie
 
 ## Mereni vzdalenosti

@@ -4,30 +4,14 @@ robotické sachy - projekt 3.C
 
 ## Komponenty
 
-* Arduino Leonardo
-* Servo
+* Arduino MEGA
 * Motor
 * Ultrazvukové čidlo
+* Relátka
 
-![obrazek](http://www.arduino.cc/en/uploads/Main/ArduinoUnoSmd450px.jpg)
-
-## Náčrt
-![obrazek] (https://github.com/dtruhlar/Sachy/blob/master/technicka_dokumentace/Nacrt1.png?raw=true)
+![obrazek](http://www.conrad.de/medias/global/ce/1000_1999/1900/1910/1917/191790_BB_00_FB.EPS_250.jpg)
 
 
-# Zapojeni pinu
- + D2-4,7-9,12-13 klavesnice (zleva-9,8,7,13,12,4,3,2)
- + D10,11 motor 1
- + D5,6 motor 2
- + A4 rele pro magnet
- + A0,1 ultrazvukove cidlo
- + A2,3 ultrazvukove cidlo 2
-
- + konkretni zapojeni
-  + P10,11 rizeni motor horni
-  + P5,6 rizeni motor spodni
-  + ultrazvuk spodni motor - echo A3,trg A2
-  + ultrazvuk horni motor - echo A1, trig A0
 ## Periferie
 
 ## Mereni vzdalenosti

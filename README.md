@@ -66,3 +66,8 @@ http://sourceforge.net/projects/simulide/?source=typ_redirect
 
 ## Sachovy robot 12.2.2016
 [![Video webcam tracking](https://img.youtube.com/vi/ePH6D-CfUx0/0.jpg)](https://www.youtube.com/watch?v=ePH6D-CfUx0)
+
+
+# Éra rozšiřování softwaru
+
+

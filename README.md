@@ -70,4 +70,10 @@ http://sourceforge.net/projects/simulide/?source=typ_redirect
 
 # Éra rozšiřování softwaru
 
+* `sachy_puvodni_verze.ino`            - Verze sachu od D. Truhlare, puvodni soubor, ze ktereho vychazeji dalsi verze. 
+
+* `sachy_kontrola_tahu.ino`            - Verze sachu s doplnenim kontroly tahu a zakladnich pravidel hry. 
+
+* `sachy_pravidla_vyhazovani1.ino`     - Verze sachu s pravidly + doplneni rozpoznani vyhozene figurky. 
+
 

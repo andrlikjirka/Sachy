@@ -28,8 +28,8 @@ Robotické sachy - projekt 3.C
  + [Proc membranova maticova klavesnice?](http://arduino-home.webnode.cz/news/dil-10-membranove-maticove-klavesnice-idealni-ovladace-pro-nase-projekty/)
 
 ## Simulator
-http://sourceforge.net/projects/simulide/?source=typ_redirect
-+ navod https://www.youtube.com/watch?v=c7SFryRa5hs
+Odkaz na stazeni simulacniho programu - http://sourceforge.net/projects/simulide/?source=typ_redirect
++ [Navod - zaklady pouzivani simulacniho programu.](https://www.youtube.com/watch?v=c7SFryRa5hs)
 
 # Pohon
 ![obrazek](http://artofcircuits.com/wp-content/uploads/2014/05/2-ch-relay-module-1.jpg)
@@ -38,11 +38,8 @@ http://sourceforge.net/projects/simulide/?source=typ_redirect
 + https://www.youtube.com/watch?v=XCp4M08IWnA
 + http://maczaka.webz.cz/cnc_rezacka.htm
 
-
-
 # Foto
   ![obrazek](https://raw.githubusercontent.com/dtruhlar/Sachy/master/technicka_dokumentace/IMG_20150505_140714.jpg)
-
 
 # Video
 
@@ -75,4 +72,9 @@ http://sourceforge.net/projects/simulide/?source=typ_redirect
 
 * `sachy_pravidla_vyhazovani1.ino`     - Verze sachu s pravidly + doplneni rozpoznani vyhozene figurky. 
 
+* `sachy_vyklizeni.ino`                - Verze sachu s pridanim zadavani 2 pismen - pro aktivaci vyklizeni.
+
+* `sachy_vyklizeni3_uprava_planovace`  - Verze sachu s upravou struktury planovace (rozdeleni do vice funkcí).
+
+* `sachy_vyklizeni_prehrani_tahu`      - Verze sachu s moznosti prehrani 1 tahu.
 

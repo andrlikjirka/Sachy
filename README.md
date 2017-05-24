@@ -76,5 +76,12 @@ Odkaz na stazeni simulacniho programu - http://sourceforge.net/projects/simulide
 
 * `sachy_vyklizeni3_uprava_planovace`  - Verze sachu s upravou struktury planovace (rozdeleni do vice funkcí).
 
+* `sachy_vyklizeni4_pamatovani_tahu.ino` - Verze sachu s moznosti zapamatovani 1 tahu.
+
 * `sachy_vyklizeni_prehrani_tahu`      - Verze sachu s moznosti prehrani 1 tahu.
+
+* `sachy_vyklizeni5.ino`               - Verze sachu s moznosti zapamatovani libovolneho poctu tahu + jejich prehrati.
+
+* `sachy_vyklizeni6.ino`               - Verze sachu s moznosti libovolnym prehravanim tahu + vyklizeni sachovnice
+
 

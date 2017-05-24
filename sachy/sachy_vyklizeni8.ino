@@ -296,8 +296,6 @@ void vyklizeni_sachovnice_iterace(){
   }
 }
 
-#define DLST_VYKLIZENI_SACHOVNICE_2 3
-
 void pridej_tah_do_prehravace(char odkud_pismeno, char odkud_cislo, char kam_pismeno, char kam_cislo, char jaka_figurka){
   if ((odkud_pismeno == kam_pismeno) && (odkud_cislo == kam_cislo)) {
     return;
@@ -754,9 +752,6 @@ void planovac_na_pole() {
         vyklizeni_sachovnice_iterace();
       }
 
-      if (dlouhodoby_stav == DLST_VYKLIZENI_SACHOVNICE_2) {
-        vyklizeni_sachovnice_2();
-      }
     }
 }
 

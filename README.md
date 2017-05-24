@@ -84,4 +84,6 @@ Odkaz na stazeni simulacniho programu - http://sourceforge.net/projects/simulide
 
 * `sachy_vyklizeni6.ino`               - Verze sachu s moznosti libovolnym prehravanim tahu + vyklizeni sachovnice
 
+* `sachy_vyklizeni8.ino`               - Verze sachu s pridanim druhe (rychlejsi) moznosti vyklizeni sachovnice.
+
 

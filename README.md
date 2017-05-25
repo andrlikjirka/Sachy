@@ -86,4 +86,6 @@ Odkaz na stazeni simulacniho programu - http://sourceforge.net/projects/simulide
 
 * `sachy_vyklizeni8.ino`               - Verze sachu s pridanim druhe (rychlejsi) moznosti vyklizeni sachovnice.
 
+* `sachy_vyklizeni_cteni`              - Verze sachu s pridanim zakladniho cteni ze serioveho kanalu (vypisovani stavu hry).
+
 

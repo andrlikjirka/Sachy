@@ -27,4 +27,8 @@
 
 * `sachy_vyklizeni_cteni`              - Verze sachu s pridanim zakladniho cteni ze serioveho kanalu (vypisovani stavu hry).
 
+* `sachy_vyklizeni_cteni2`             - Verze sachu s pridanim moznosti zadani novych tahu a jejich prehrati (ze serioveho kanalu).
+
+* `sachy_vyklizeni_cteni3`             - Verze sachu s pridanim moznosti vyklizeni sachovnice (ze serioveho kanalu).
+
 

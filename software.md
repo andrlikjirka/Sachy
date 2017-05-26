@@ -1,4 +1,8 @@
-﻿
+﻿# Software
+
+
+
+
 # Éra rozšiřování softwaru
 
 * `sachy_puvodni_verze.ino`            - Verze sachu od D. Truhlare, puvodni soubor, ze ktereho vychazeji dalsi verze. 

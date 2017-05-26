@@ -1,6 +1,33 @@
 ﻿# Software
 
 
+# Ovladani 
+* Sachy jsou vybavene dvema klavesnicemi (pro kazdeho hrace jedna). Pomoci techto klávesnic lze ovladat sachy (zadavani tahu, prehravani tahu `BB`, vyklizeni sachovnice `AA` nebo `CC` - 2 verze vyklizeni sachovnice) i bez pripojeneho PC. Pokud je pri hre PC pripojene, po seriove lince se z Arduina posilaji aktualni informace o stavu hry.
+
+* Samotne programovani probiha pres pripojeny PC. 
+
+* V poslednich trech verzich programu lze komunikovat s Arduinem pres seriovou linku obousmerne. Podrobnosti o komunikaci se seriovou linkou (prikazy) se nachazeji nize.
+
+
+# Seriova linka 
+1. Vypsani stavu hry
+
+* Prikaz `Stav?` vrati aktualni stav hry (tj. vypise aktualni souradnice vsech figurek).
+
+2. Zadavani noveho tahu
+
+* Prikazem `Novy tah ....` se ulozi aktualni tah do pameti pro prehrati. 
+
+  Napriklad `Novy tah A2A3` => vychozi pozice `A2` a cilova pozice `A3`.
+
+3. Prehravani partie (zadanych tahu)
+
+* Prikazem `Prehrat partii` se spusti prehravani tahu ulozenych v pameti + vypise obsah pameti prehravanych tahu. 
+
+4. Vyklizeni sachovnice
+
+* Prikazem `Vyklidit sachovnici` se spusti vyklizeni sachovnice.
+
 
 
 # Éra rozšiřování softwaru

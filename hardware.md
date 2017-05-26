@@ -10,7 +10,9 @@ Robotické sachy - projekt 3.C
 * Relátka
 
 ![obrazek](http://www.conrad.de/medias/global/ce/1000_1999/1900/1910/1917/191790_BB_00_FB.EPS_250.jpg)
+![obrazek](https://github.com/mjirik/Sachy/blob/master/graphics/sachy.jpg?raw=true)
 
+<a href="url"><img src="http://url.to/image.png" align="left" height="48" width="48" ></a>
 
 ## Periferie
 

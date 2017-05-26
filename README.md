@@ -1,6 +1,8 @@
 ﻿# Sachy 
-Robotické sachy - projekt 3.C
+Robotické sachy - projekt SPŠ Klatovy
 ![pic](http://modranka-sach.wbl.sk/0600-markob.gif)
+
+[hardware](https://github.com/mjirik/Sachy/blob/master/hardware.md)
 
 ## Komponenty
 

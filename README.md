@@ -25,6 +25,8 @@ Robotické sachy - víceletý projekt studentů SPŠ Klatovy
 
 ## Video
 
+[![Video](https://i.imgur.com/25jqV8F.jpg)](https://www.youtube.com/watch?v=4e7s2Jkg3LQ)
+
 [![Video webcam tracking](https://img.youtube.com/vi/pHp0IgzMXa4/0.jpg)](https://www.youtube.com/watch?v=pHp0IgzMXa4)
 
 [![Video webcam tracking](https://img.youtube.com/vi/m0MDI-YSEDc/0.jpg)](https://www.youtube.com/watch?v=m0MDI-YSEDc)
